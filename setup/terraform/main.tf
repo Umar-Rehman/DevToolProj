@@ -8,3 +8,8 @@ module "vpc" {
     source = "./vpc"
 
 }
+
+module "subnet-1" {
+    source = "./subnets"
+    auto_vpc_id = module.vpc.auto_vpc_id
+}
